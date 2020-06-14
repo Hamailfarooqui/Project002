@@ -4,6 +4,7 @@ import './Room.css'
 function Room() {
     let [isLit, setLit] = useState(true);
     let [age , setAge] = useState(24);
+    let [temp , setTemp] = useState(24);
 
     return (
         <div className={`room ${isLit? "lit": "dark"}`}>
@@ -19,7 +20,19 @@ function Room() {
                         }}>
             Increase Age
         </button>
-
+        <br/>
+        <button onClick={ ()=> {
+                        console.log("Increase temp arrow function");
+                        setTemp(++temp);
+                        }}>
+            Increase Temperature
+        </button>
+        <button onClick={ ()=> {
+                        console.log("Decrease temp arrow function");
+                        setTemp(--temp);
+                        }}>
+            Decrease Temperature
+        </button>
     </div>
     
     
